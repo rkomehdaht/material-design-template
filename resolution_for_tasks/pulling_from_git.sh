@@ -4,4 +4,4 @@ echo "pulling from remote repo..."
 #change branch if we are already in other one
 git checkout main
 #Getting from remote repository
-git pull origin
+git pull origin main > /home/tim/log
