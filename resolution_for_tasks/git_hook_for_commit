@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+var1=$(git status | grep "new file" | cut -d : -f 2 | tr '\n' ' ') 
+var2=$(git status | grep "modified" | cut -d : -f 2 | tr '\n' ' ') 
+commiting_files=($var1 $var2)
+
+for commiting_files in ${commiting_files[@]}
+do 
+	(( count++ ))
+	cat $commiting_files | grep "any word we need to exlude"
+	var3=$(echo $?)
+if [ $var3 -eq 1 ]
+then 
+	continue
+else
+	echo Please check your ${commiting_files} file, there is some "any word we need to exlude" in it!
+	exit 1
+fi
+done	
