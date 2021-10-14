@@ -1,0 +1,14 @@
+pipeline {
+	agent { slave1 }
+	tools {
+	Uglifyjs 'uglify-js'
+	}
+	stages {
+		stage('just_check') {
+			steps {
+				echo "It works"
+}
+}
+}
+}
+
