@@ -1,14 +1,20 @@
 pipeline {
 	agent { slave1 }
 	tools {
-	Uglifyjs 'uglify-js'
+	nodejs 'NodeJS'
 	}
+  parallel {
 	stages {
-		stage('just_check') {
+		stage('compressing js') {
 			steps {
-				echo "It works"
+				sh 'uglifyjs www/js/* -eo www/min'
+            }
+    stage('compressing css'){
+      steps {
+        clean-css www/css/* -o www/min 
+    }
 }
 }
 }
 }
-
+}
