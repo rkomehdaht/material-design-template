@@ -1,20 +1,22 @@
 pipeline {
-	agent { slave1 }
+	agent { 
+  label 'slave1' 
+  }
 	tools {
 	nodejs 'NodeJS'
 	}
-  parallel {
 	stages {
+  parallel {
 		stage('compressing js') {
 			steps {
 				sh 'uglifyjs www/js/* -eo www/min'
             }
+            },
    		stage('compressing css') {
       			steps {
         sh 'clean-css www/css/* -o www/min' 
     }
-}
-}
+    }
 }
 }
 }
