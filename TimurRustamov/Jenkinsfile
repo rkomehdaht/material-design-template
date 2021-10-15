@@ -6,17 +6,17 @@ pipeline {
 	nodejs 'NodeJS'
 	}
 	stages {
-  parallel {
+  parallel (
 		stage('compressing js') {
 			steps {
 				sh 'uglifyjs www/js/* -eo www/min'
             }
-            }
+            },
    		stage('compressing css') {
       			steps {
         sh 'clean-css www/css/* -o www/min' 
     }
     }
-}
+)
 }
 }
