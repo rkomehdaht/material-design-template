@@ -15,7 +15,7 @@ pipeline {
             }
    		stage('compressing css') {
       			steps {
-        sh "ls www/css | xargs -I@ clean-css www/js/@ -o www/min/@"
+        sh "ls www/css | xargs -I@ cleancss www/js/@ -o www/min/@"
     }
     }
 }
