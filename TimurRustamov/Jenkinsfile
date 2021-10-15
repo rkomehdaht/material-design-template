@@ -9,9 +9,9 @@ pipeline {
 			steps {
 				sh 'uglifyjs www/js/* -eo www/min'
             }
-    stage('compressing css'){
-      steps {
-        clean-css www/css/* -o www/min 
+   		stage('compressing css') {
+      			steps {
+        sh 'clean-css www/css/* -o www/min' 
     }
 }
 }
