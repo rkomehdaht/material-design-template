@@ -107,4 +107,4 @@ https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_t
  
 ![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2021.png)
 
-![Image]((https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2022.png)
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2022.png)
