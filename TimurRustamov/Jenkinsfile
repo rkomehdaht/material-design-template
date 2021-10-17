@@ -10,7 +10,7 @@ pipeline {
   parallel {
 		stage('compressing js') {
 			steps {
-				sh "ls www/css | xargs -I@ uglifyjs -o www/min/@ --compress"
+				sh "ls www/js | xargs -I@ uglifyjs -o www/min/@ --compress"
             }
             }
    		stage('compressing css') {
