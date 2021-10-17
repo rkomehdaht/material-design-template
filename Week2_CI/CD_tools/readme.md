@@ -71,40 +71,40 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
 ## •	create tar archive (ignore .git, css and js folders) 
 ## •	archive result 
  
-![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2011.png)
- 
 ![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2012.png)
-
+ 
 ![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2013.png)
+
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2014.png)
  
 ## 5.	Setup the GitHub webhook to trigger the jobs - 2 
 ## •	Git plugin - http(s)://JENKINS_URL/git/notifyCommit?url=REPO_URL 
 ## •	Enable ‘Poll SCM’ in Job settings 
  
-![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2014.png)
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2015.png)
 
 ## •	GitHub plugin - http(s)://JENKINS_URL/github-webhook/ 
 ## •	Enable ‘GitHub hook trigger for Git SCM polling’ 
  
-![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2015.png)
-
 ![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2016.png)
- 
-![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2017.png)
 
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2017.png)
+ 
 ![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2018.png)
+
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2019.png)
 
 ## * Use Scripted pipeline instead of declarative - * 
 https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Jenkinsfile_scripted
 ## * Spin up VM with installed Artifactory - *  
 ##### *T2.micro too weak to run artifactory*
  
-![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2019.png)
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2020.png)
 
 ##### *Using cloud artifactory*
 
 ## * Add new stage for publishing artifacts into Artifactory - * 
  
-![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2020.png)
+![Image](https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2021.png)
 
-![Image]((https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2021.png)
+![Image]((https://github.com/rkomehdaht/material-design-template/blob/master/Week2_CI/CD_tools/Screenshots/Picture%2022.png)
