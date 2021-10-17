@@ -21,7 +21,7 @@ pipeline{
         }
         stage('Archiving') {
 		    steps {
-		        sh "tar --exclude=.git --exclude=www/css --exclude=www/js -czf archieve.tar.gz ."
+		        sh "tar --exclude=.git --exclude=www/css --exclude=www/js -czf archieve.tar.gz *"
 		        archiveArtifacts 'archieve.tar.gz'
 		    }
 	    }
