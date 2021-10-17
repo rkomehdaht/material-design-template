@@ -21,7 +21,7 @@ pipeline{
         }
         stage('Archiving') {
 		    steps {
-		        sh "tar --exclude=.git --exclude=www/css --exclude=www/js --exclude=arch.tar.gz -czf arch.tar.gz ."
+		        sh "tar --exclude=.git --exclude=Week2_CI/CD_tools --exclude=www/css --exclude=www/js --exclude=arch.tar.gz -czf arch.tar.gz ."
 		    }
 	    }
     }
