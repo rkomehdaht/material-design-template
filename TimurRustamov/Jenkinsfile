@@ -22,7 +22,8 @@ pipeline {
 }
 	stage('archiving the results') {
 		steps {
-		sh "tar --exclude=.git --exclude=www/css --exclude=www/js -czvf Week2_CI_CD_tools/result.tar.gz ."
+		sh "tar --exclude=.git --exclude=www/css --exclude=www/js --exclude=Week2_CI_CD_tools/result.tar.gz -czvf Week2_CI_CD_tools/result.tar.gz ."
+		archiveArtifacts artifacts: 'Week2_CI_CD_tools/result.tar.gz', fingerprint: true
 		}
 	}
 }
