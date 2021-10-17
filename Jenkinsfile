@@ -21,8 +21,8 @@ pipeline{
         }
         stage('Archiving') {
 		    steps {
-		        sh "tar --exclude=.git --exclude=www/css --exclude=www/js --exclude=RuslanPiatrovich/archieve.tar.gz -czvf RuslanPiatrovich/archieve.tar.gz ."
-		        archiveArtifacts artifacts: 'RuslanPiatrovich/archieve.tar.gz', fingerprint: true
+		        sh "tar --exclude=.git --exclude=www/css --exclude=www/js -czvf archieve.tar.gz ."
+		        archiveArtifacts 'archieve.tar.gz'
 		    }
 	    }
     }
