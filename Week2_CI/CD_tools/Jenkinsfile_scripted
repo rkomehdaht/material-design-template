@@ -1,15 +1,17 @@
 node{
-    nodejs = tool 'NodeJS'
-    stage ('Checkout'){
-      	checkout scm  
-   	}
-    stage('Compressing'){
-        utils = ["uglify-js" : { sh "${nodejs}/bin/uglifyjs -o www/min/min.js www/js/*.js"},
-                "clean-css" : { sh "${nodejs}/bin/cleancss -o www/min/min.css www/css/*.css"}]
-        parallel utils
-    }
-    stage('Archiving'){
-        sh "tar --exclude=.git --exclude=Week2_CI/CD_tools --exclude=www/css --exclude=www/js --exclude=arch.tar.gz -czf arch.tar.gz ."
+    try {
+        nodejs = tool 'NodeJS'
+        stage ('Checkout'){
+        	checkout scm  
+   	    }
+        stage('Compressing'){
+           utils = ["uglify-js" : { sh "${nodejs}/bin/uglifyjs -o www/min/min.js www/js/*.js"},
+                    "clean-css" : { sh "${nodejs}/bin/cleancss -o www/min/min.css www/css/*.css"}]
+           parallel utils
+        }
+        stage('Archiving'){
+            sh "tar --exclude=.git --exclude=Week2_CI/CD_tools --exclude=www/css --exclude=www/js --exclude=arch.tar.gz -czf arch.tar.gz ."
+        }
     }
     finally {
         archiveArtifacts artifacts: 'arch.tar.gz', fingerprint: true
