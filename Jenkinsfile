@@ -28,7 +28,7 @@ pipeline{
     post{
 		success {
 			archiveArtifacts artifacts: 'arch.tar.gz', fingerprint: true
-            curl -u ruslanpi@playtika.com:5714873Qqqq! -T arch.tar.gz "https://komehdaht.jfrog.io/artifactory/default-generic-local/arch.tar.gz"
+            sh "curl -u ruslanpi@playtika.com:5714873Qqqq! -T arch.tar.gz 'https://komehdaht.jfrog.io/artifactory/default-generic-local/arch.tar.gz'"
 		}
     }
 }
