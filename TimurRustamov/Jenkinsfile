@@ -22,7 +22,7 @@ pipeline {
 }
 	stage('archiving the results') {
 		steps {
-		sh "tar --exclude=.git --exclude=www/css --exclude=www/js  --exlude=result.tar.gz -czvf result.tar.gz ."
+		sh "tar --exclude=.git --exclude=www/css --exclude=www/js  --exlude=.result.tar.gz -czvf result.tar.gz ."
 		}
 	}
 }
